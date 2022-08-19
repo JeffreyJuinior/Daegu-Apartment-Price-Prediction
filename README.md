@@ -105,5 +105,43 @@ Feature engineering is the process of extracting features from a dataset and ass
     
 ### **Evaluation Matrix Comparison Model after Tuning**
 
+![evaluationMatrix](https://github.com/JeffreyJuinior/Daegu-Apartment-Price-Prediction/blob/main/Images/Evaluation%20matrix%20comparison.PNG)
+
+**XGBoost**
+
+XGBoost is an abbreviation for eXtreme Gradient Boosting. XGBoost is a gradient-driven decision tree implementation that is intended to be efficient and accurate.
+
+![xgboost](https://github.com/JeffreyJuinior/Daegu-Apartment-Price-Prediction/blob/main/Images/ilustration_xgboost.png?raw=true)
+
+From the illustration above we can see that the XGBoost algorithm works by fixing the residual from the previous prediction results but not from the beginning so as to produce good accuracy and more efficient.
+
+### **Conclusion**
+
+According to the evaluation matrix results, the best model after tuning was XGBoost with an R2 Score value of 0.839 or 83.9%, indicating that the model is quite good at explaining the variation in the Y value.
+
+The model also has an average probability of error percentage (MAPE) of 0.179 or 17.9%, which means that the predicted apartment price can deviate from the actual price by 17.77%, which can be higher or lower than the original price. The average apartment price is 32618.4 dollars **off**.
+
+The created model also has a limitation in that it can only predict apartments that cost less than 510747$ and have a room area of less than 32397 sqf. The model then only uses data on the prices of apartments in Daegu, South Korea, from 2007 to 2017.
+
+**Impact of Implementation**
+
+- Traditioanl Valuation 
+
+    Market researchers take about 2 - 8 weeks to do research related to the best price of 1 apartment unit (Source: [HingeMarketing](https://hingemarketing.com/blog/story/cost_and_benefits_of_market_research) )
 
 
+- Advanced Valuation (machine learning model)
+
+    By using machine learning property agents can predict 1 unit Apartment prices in less than 1 day.
+
+### **Recomdendations**
+
+The following are recommendations for improving the model's ability to predict apartment prices:
+
+1. Including features that have a higher correlation to Sale Price apartments, such as the number of apartment employees (janitor, security, maintenance staff, etc.), the number of apartment floors, information on whether apartment sales include or do not include furniture, and so on.
+
+2. Increase the amount of the latest apartment data.
+
+3. Try other regression algorithms such as Recursive Neural Network (RNN).
+
+4. The current model can be improved by incorporating apartment data from other huge Korean cities such as Seoul and Busan, allowing the model to predict apartment prices in cities other than Daegu.
